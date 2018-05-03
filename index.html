@@ -3,11 +3,39 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <title>title</title>
   <link rel="custom" href="custom.css" type="text/css">
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
   <style type="text/css">
    
   </style>
+  <script>
+   $(function(){
+      
+      $('button').click(function(){
+
+        var name = $("#name").val()
+        var interest = $("#interest").val()
+        var accomplishment = $("#accomplishment").val()
+        var adj = $("#adj").val()
+        //$('div').empty();
+        
+        var story = "This is the resume of " +
+                    name + ". " + "They like " + 
+                    interest + ". " + " They have accomplished " 
+                    + accomplishment + ". " + " So take your time and look at this "
+                    + adj + "resume.";
+                  
+        
+        $("button").click(function(){
+          $("p").html(story);
+        });
+        
+      });
+      
+    });
+    </script>
   </head>
   <body data-spy="scroll" data-target=".navbar" data-offset="50">
 <body>
@@ -33,7 +61,7 @@
     </nav>
      <div id="Responces" class="container-fluid">
             <h2>Responces from people:</h2>
-            <p>Just a few of our happy customers</p>
+            <p>Just a couple of thanks and repliesi got from students or people that tried the asdvice.</p>
             <ul class="list-group">
                 <li class="list-group-item">
                     "This advice truly helped me get organized." -annonymous<br>
@@ -49,6 +77,16 @@
                 
             </ul>
         </div>
+        <div id="Questions to get tips for." class="container-fluid">
+         Whats your name?: <input id="name"><br>
+          What interess you?: <input id="interest"><br>
+          What have you accomplished?: <input id="accomplishment"><br>
+          Give me an adjective.: <input id="adj"><br>
+          <button>Create resume!</button>
+  
+          <div id="result">
+          <p></p>
+          </div>
     </body>
     
       <div class="container">
